@@ -5,7 +5,8 @@ class StringCalculator:
     def add(numbers: str) -> int:
         if numbers == "":
             return 0
-        return int(numbers)
+        num_list = list(map(int, numbers.split(","))) 
+        return sum(num_list)
 
 
 class TestStringCalculator(unittest.TestCase):
