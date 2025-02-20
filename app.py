@@ -12,8 +12,12 @@ class StringCalculator:
             delimiter, numbers = numbers[2:].split("\n", 1)
 
         num_list = list(map(int, re.split(f"[{delimiter}\n]", numbers)))
-        return sum(num_list)
+        negatives = [n for n in num_list if n < 0]
 
+        if negatives:
+            raise ValueError(f"Negative numbers not allowed: {', '.join(map(str, negatives))}")
+
+        return sum(num_list)
 
 class TestStringCalculator(unittest.TestCase):
     def test_empty_string(self):
