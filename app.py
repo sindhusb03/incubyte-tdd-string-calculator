@@ -13,7 +13,8 @@ class TestStringCalculator(unittest.TestCase):
         self.assertEqual(StringCalculator.add(""), 0)
     def test_single_number(self):
         self.assertEqual(StringCalculator.add("1"), 1)
-
+    def test_two_numbers(self):
+        self.assertEqual(StringCalculator.add("1,5"), 6)
 
 if __name__ == "__main__":
     unittest.main()
