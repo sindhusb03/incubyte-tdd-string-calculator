@@ -3,7 +3,9 @@ import unittest
 class StringCalculator:
     @staticmethod
     def add(numbers: str) -> int:
-        return 0  # Placeholder return for now
+        if numbers == "":
+            return 0
+        return int(numbers)
 
 class TestStringCalculator(unittest.TestCase):
     def test_empty_string(self):
