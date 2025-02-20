@@ -17,6 +17,9 @@ class TestStringCalculator(unittest.TestCase):
         self.assertEqual(StringCalculator.add("1,5"), 6)
     def test_multiple_numbers(self):
         self.assertEqual(StringCalculator.add("1,2,3,4"), 10)
+    def test_newline_as_delimiter(self):
+        self.assertEqual(StringCalculator.add("1\n2,3"), 6)
+
 
 if __name__ == "__main__":
     unittest.main()
