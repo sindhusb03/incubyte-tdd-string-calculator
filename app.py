@@ -1,11 +1,12 @@
 import unittest
+import re
 
 class StringCalculator:
     @staticmethod
     def add(numbers: str) -> int:
         if numbers == "":
             return 0
-        num_list = list(map(int, numbers.split(",")))
+        num_list = list(map(int, re.split(",|\n", numbers)))
         return sum(num_list)
 
 class TestStringCalculator(unittest.TestCase):
