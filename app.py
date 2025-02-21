@@ -37,6 +37,5 @@ class TestStringCalculator(unittest.TestCase):
             StringCalculator.add("1,-2,3,-4")
         self.assertEqual(str(context.exception), "Negative numbers not allowed: -2, -4")
 
-
 if __name__ == "__main__":
     unittest.main()
